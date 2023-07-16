@@ -7,9 +7,15 @@ This script replaces **all instances** of a specific hexadecimal string within a
 *`sudo` may be required in front of command depending on permissions of the file being modified.*
 
 ```terminal
-# make executable
-chmod +x hexreplace.sh
+# clone repo
+git clone https://github.com/bradsec/hexreplace.git
 
+# make executable
+cd hexreplace
+chmod +x hexreplace.sh
+```
+
+```terminal
 # run with command-line arguments
 ./hexreplace.sh <input_file> <search_hex> <replace_hex>
 
