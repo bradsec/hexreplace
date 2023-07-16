@@ -11,6 +11,12 @@ if [ -z "$input_file" ] || [ -z "$search_hex" ] || [ -z "$replace_hex" ]; then
   exit 1
 fi
 
+# Check if perl command exists
+if ! command -v perl > /dev/null 2>&1; then
+  printf "Perl is not installed. Please install Perl and try again.\n"
+  exit 1
+fi
+
 # Check if the input file exists
 if [ ! -f "$input_file" ]; then
   printf "Input file '%s' does not exist.\n" "$input_file"
